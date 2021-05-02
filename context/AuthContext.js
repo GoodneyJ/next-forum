@@ -8,6 +8,8 @@ export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     const [error, setError] = useState(null)
 
+    useEffect(() => checkUserLoggedIn(), [])
+
     const router = useRouter();
 
     //Register user
@@ -31,17 +33,51 @@ export const AuthProvider = ({children}) => {
 
     //Login user
     const login = async ({email, password}) => {
-        console.log({email, password})
+        const res = await fetch(`http://localhost:3000/api/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        })
+
+        const data = await res.json()
+
+        if(!data.message) {
+            setUser(data)
+            router.push('/forums')
+        } else {
+            setError(data.message);
+            setError(null)
+        }
     }
 
     //Logout user
     const logout = async () => {
-        console.log('logout')
+        const res = await fetch(`http://localhost:3000/api/auth/logout`, {
+            method: 'POST'
+        })
+
+        if(res.ok) {
+            setUser(null)
+            router.push('/')
+        }
     }
 
     //Check if user is logged in
     const checkUserLoggedIn = async (user) => {
-        console.log('check')
+        const res = await fetch(`http://localhost:3000/api/auth/user`)
+        const data = await res.json()
+
+        if(res.ok) {
+           setUser(data)
+        } else {
+            setUser(null)
+
+        }
     }
 
     return (

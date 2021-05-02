@@ -42,8 +42,8 @@ export const Navbar = () => {
                     <Link href="/donate">Donate</Link>
                 </li>
                 {user ?
-                <li className={router.pathname == '/account/login' ? navStyles.active : ''}>
-                    <Link href="/account/login">Logout</Link>
+                <li onClick={() => logout()}>
+                    Logout
                 </li>
                 :
                 <li className={router.pathname == '/account/login' ? navStyles.active : ''}>

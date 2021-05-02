@@ -90,12 +90,24 @@ export default function EditPost({ post }) {
 }
 
 
-EditPost.getInitialProps = async ({ query: { id } }) => {
-    const res = await fetch(`http://localhost:3000/api/posts/${id}`);
+// EditPost.getInitialProps = async ({ query: { id } }) => {
+//     const res = await fetch(`http://localhost:3000/api/posts/${id}`);
 
+//     const { data } = await res.json();
+
+//     return {
+//         post: data
+//     }
+// }
+
+export async function getServerSideProps({ query: {id}, req}) {
+    const res = await fetch(`http://localhost:3000/api/posts/${id}`);
     const { data } = await res.json();
 
+
     return {
-        post: data
+        props: {
+            post: data,
+        },
     }
 }

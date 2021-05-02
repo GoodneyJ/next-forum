@@ -1,10 +1,10 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 
 import Nav from '../../components/Navbar'
 import Meta from '../../components/Meta'
 import Link from 'next/link'
 import AuthContext from '../../context/AuthContext'
-import { ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify'
 import Footer from '../../components/Footer'
 
 import loginStyles from '../../styles/Login.module.css'
@@ -16,6 +16,8 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   const {login, error} = useContext(AuthContext)
+
+  useEffect(() => error && toast.error(error))
 
   const handleSubmit = (e) => {
     e.preventDefault();
