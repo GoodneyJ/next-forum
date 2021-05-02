@@ -1,0 +1,158 @@
+@-webkit-keyframes shine {
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes shine {
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+.sectionContainer {
+  background-color: #101010;
+  padding: 2rem 1.5rem;
+}
+
+.sectionContainer .headingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sectionContainer .headingContainer .headingButton {
+  background-color: #111111;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sectionContainer .headingContainer .headingButton:hover {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.424), 0px 2px 4px -1px rgba(0, 0, 0, 0.424);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.424), 0px 2px 4px -1px rgba(0, 0, 0, 0.424);
+  background-color: #202020;
+}
+
+.sectionContainer .headingContainer .headingButton:hover span {
+  color: goldenrod;
+  color: goldenrod;
+  background: goldenrod;
+  background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.75) 5%, rgba(255, 255, 255, 0.75) 10%, transparent 10%, transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-animation: shine 3s infinite;
+          animation: shine 3s infinite;
+}
+
+.sectionContainer h1 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.sectionContainer h1::after {
+  content: '';
+  margin: .75rem 0;
+  height: 4px;
+  width: 75%;
+  background-color: goldenrod;
+  display: block;
+}
+
+.sectionContainer .middleContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sectionContainer .middleContent .topicsContainer {
+  width: 75%;
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection {
+  color: white;
+  background-color: #1d1d1d;
+  padding: 0.5rem;
+  margin: 1rem 0rem;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection h4 {
+  margin: 1rem 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection p {
+  margin: 1rem 1.5rem;
+  font-size: .75rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection:hover {
+  cursor: pointer;
+  -webkit-transform: translate(-2px, -3px);
+          transform: translate(-2px, -3px);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.424), 0px 2px 4px -1px rgba(0, 0, 0, 0.424);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.424), 0px 2px 4px -1px rgba(0, 0, 0, 0.424);
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection:hover h4 {
+  color: goldenrod;
+  background: goldenrod;
+  background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.75) 5%, rgba(255, 255, 255, 0.75) 10%, transparent 10%, transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-animation: shine 3s infinite;
+          animation: shine 3s infinite;
+}
+
+.sectionContainer .middleContent .topicsContainer .topicSection:hover p {
+  color: goldenrod;
+}
+
+.sectionContainer .middleContent .recentTopicsContainer {
+  width: 20%;
+  margin: 1rem 0rem;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=PostSection.module.css.map */

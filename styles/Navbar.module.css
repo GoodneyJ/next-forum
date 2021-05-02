@@ -1,0 +1,89 @@
+/* VARIABLES */
+/* COMPONENTS */
+.navbarContainer {
+  font-family: 'Montserrat';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navbarContainer .active {
+  font-weight: 700;
+  color: goldenrod;
+  background-color: #1b1b1b;
+}
+
+.navbarContainer .active::after {
+  content: '';
+  display: block;
+  background-color: goldenrod;
+  margin-top: 3px;
+  height: 2px;
+  width: 2px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbarContainer .logo {
+  font-weight: 700;
+  padding: 1.5rem;
+  color: goldenrod;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.navbarContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 1rem;
+}
+
+.navbarContainer ul li {
+  margin: 0 1rem;
+  font-weight: 500;
+  padding: .75rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.navbarContainer ul li::after {
+  content: '';
+  display: block;
+  background-color: goldenrod;
+  height: 2px;
+  width: 2px;
+  margin-top: 3px;
+  left: 0;
+  width: 0%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbarContainer ul li:hover {
+  background-color: #1b1b1b;
+  color: goldenrod;
+  cursor: pointer;
+}
+
+.navbarContainer ul li:hover::after {
+  width: 100%;
+}
+
+/* GENERAL */
+/*# sourceMappingURL=Navbar.module.css.map */

@@ -1,0 +1,40 @@
+/* ABOUT SECTION */
+.aboutContainer {
+    background-color: #0c0c0c;
+    padding: 5rem 0;
+    #aboutHeading {
+        margin-top: 0rem;
+    
+        span {
+            color: goldenrod;
+        }
+
+    }
+
+    .heading {
+
+        margin: 0rem 1.5rem;
+        font-size: 3rem;
+
+    }
+
+    p {
+        padding: 1.5rem 1.5rem;   
+        margin: 0;
+
+        letter-spacing: 2px;
+    }
+
+    .text {
+        font-family: 'playfair display';
+        font-size: 1.25rem;
+        width: 75%;
+
+    }
+}
+
+/* FEATURE SECTION */
+.featureRow {
+    display: flex;
+    background-color: rgb(12, 12, 12);
+}

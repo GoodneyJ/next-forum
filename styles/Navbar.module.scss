@@ -1,0 +1,84 @@
+/* VARIABLES */
+
+/* COMPONENTS */
+.navbarContainer {
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+
+    .active {
+        font-weight: 700;
+        color: goldenrod;
+        background-color: rgb(27, 27, 27);
+
+        &::after {
+            content: '';
+            display: block;
+            background-color: goldenrod;
+            margin-top: 3px;
+            height: 2px;
+            width: 2px;
+            left: 0;
+            width: 100%;
+            transition: 0.2s;
+        }
+    }
+
+    .logo {
+        font-weight: 700;
+        padding: 1.5rem;
+        color:goldenrod;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+
+    ul {
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 1rem;
+
+        li {
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: .75rem;
+            transition: 0.2s;
+            border-radius: 5px;
+
+            &::after {
+                content: '';
+                display: block;
+                background-color: goldenrod;
+                height: 2px;
+                width: 2px;
+                margin-top: 3px;
+                left: 0;
+                width: 0%;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                background-color: rgb(27, 27, 27);
+                color: goldenrod;
+                cursor: pointer;
+                
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        
+        
+    }
+}
+
+
+
+/* GENERAL */

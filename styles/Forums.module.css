@@ -1,0 +1,170 @@
+.chatBackground {
+  background-color: #101010;
+  color: #e0e0e0;
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.55))), url("../public/backgroundOne.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55)), url("../public/backgroundOne.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatBackground .chatContainer {
+  background-color: #1d1d1d;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.34), 0px 9px 46px 8px rgba(0, 0, 0, 0.34), 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.34), 0px 9px 46px 8px rgba(0, 0, 0, 0.34), 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
+}
+
+.chatBackground .chatContainer .chatOutput {
+  background-color: #101010;
+  width: 98%;
+  margin: 0 auto;
+  padding: 1rem auto;
+  height: 500px;
+  border-radius: 2px;
+}
+
+.chatBackground .chatContainer .chatOutput .messageList {
+  list-style: none;
+  padding: .001rem 0;
+  margin: 1rem 0;
+}
+
+.chatBackground .chatContainer .chatOutput .messageList .userMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1rem;
+  margin: 1.25rem auto;
+  width: 95%;
+  height: 3.75rem;
+  border-radius: 5px;
+  background-color: #1d1d1d;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.chatBackground .chatContainer .chatOutput .messageList .userMessage span {
+  background-color: #101010;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.chatBackground .chatContainer .chatOutput .messageList .userMessage .messageContent {
+  margin-left: 1rem;
+}
+
+.chatBackground .chatContainer .chatOutput .messageList .userMessage .messageContent h4 {
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.chatBackground .chatContainer .chatOutput .messageList .userMessage .messageContent p {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+.chatBackground .chatContainer .chatInterface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chatBackground .chatContainer .chatInterface textarea {
+  width: 85%;
+  margin: .5rem .5rem;
+  margin-right: 0;
+  border-radius: 2px;
+  border: none;
+  background-color: #101010;
+  color: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+.chatBackground .chatContainer .chatInterface textarea:focus {
+  border: 1px solid black;
+}
+
+.chatBackground .chatContainer .chatInterface .chatButtons .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chatBackground .chatContainer .chatInterface .chatButtons .row .rowButtons {
+  margin: .5rem 1rem;
+  background-color: #101010;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.chatBackground .chatContainer .chatInterface .chatButtons .sendBtn {
+  text-align: center;
+  letter-spacing: 1px;
+  padding: .25rem;
+  text-transform: uppercase;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.postsContainer {
+  padding: 3rem 0rem;
+  background-color: #101010;
+  border-top: 2px solid #464646;
+}
+
+.postsContainer .createPostLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.postsContainer .createPostLink p {
+  background-color: #1d1d1d;
+  width: 120px;
+  margin: 0 1.5rem;
+  padding: .75rem;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.postsContainer .createPostLink p:hover {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.568), 0px 2px 4px -1px rgba(0, 0, 0, 0.555);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.568), 0px 2px 4px -1px rgba(0, 0, 0, 0.555);
+  cursor: pointer;
+  color: goldenrod;
+  background-color: #0a0a0a;
+}
+/*# sourceMappingURL=Forums.module.css.map */

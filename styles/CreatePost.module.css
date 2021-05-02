@@ -1,0 +1,109 @@
+.divBackground {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../public/backgroundTwo.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../public/backgroundTwo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.divBackground .createPostContainer {
+  background-color: #1d1d1d;
+  width: 80%;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.863), 0px 1px 10px 0px rgba(0, 0, 0, 0.534), 0px 2px 4px -1px rgba(0, 0, 0, 0.603);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.863), 0px 1px 10px 0px rgba(0, 0, 0, 0.534), 0px 2px 4px -1px rgba(0, 0, 0, 0.603);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.divBackground .createPostContainer h2 {
+  width: 80%;
+  margin: 1rem auto;
+  text-transform: uppercase;
+}
+
+.divBackground .createPostContainer h2::after {
+  content: '';
+  background-color: goldenrod;
+  height: 3px;
+  display: block;
+  width: 35%;
+  margin: 0.5rem 0;
+}
+
+.divBackground .createPostContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.divBackground .createPostContainer form input, .divBackground .createPostContainer form select {
+  margin: .5rem auto;
+  width: 80%;
+  padding: 1rem;
+  background-color: #101010;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.divBackground .createPostContainer form input:focus, .divBackground .createPostContainer form select:focus {
+  background-color: #0a0a0a;
+}
+
+.divBackground .createPostContainer form textarea {
+  margin: .5rem auto;
+  width: 80%;
+  height: 200px;
+  padding: 1rem;
+  background-color: #101010;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.divBackground .createPostContainer form .submitPostBtn {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.divBackground .createPostContainer form .submitPostBtn:hover {
+  background-color: #0a0a0a;
+  color: goldenrod;
+}
+/*# sourceMappingURL=CreatePost.module.css.map */
