@@ -1,15 +1,24 @@
 import PostSection from '../components/PostSection';
 import Link from 'next/link'
+import AuthContext from '../context/AuthContext'
+import {useContext} from 'react'
 
 
 import forumStyles from '../styles/Forums.module.css'
 
 export const PostContainer = (props) => {
+
+
+    const {user} = useContext(AuthContext)
+
     return (
         <div className={forumStyles.postsContainer}>
-          <div className={forumStyles.createPostLink}>
-            <Link href="/posts/create"><p>Create Post</p></Link>
-          </div>
+          {user ? 
+            <div className={forumStyles.createPostLink}>
+              <Link href="/posts/create"><p>Create Post</p></Link>
+            </div>
+            :
+            ''}
           <PostSection title='Important'
                         topicSections={["Announcements & Changelogs", "Staff Introductions", "Rules"]}
                         sideContentTitle="Active Users"

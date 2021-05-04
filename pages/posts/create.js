@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
+import AuthContext from '../../context/AuthContext'
+import {useContext} from 'react'
 
 
 import Nav from '../../components/Navbar'
@@ -12,11 +14,13 @@ import createPostStyles from '../../styles/CreatePost.module.css'
 
 export default function CreatePost() {
 
+    const {user} = useContext(AuthContext)
+
     const [values, setValues] = useState({
         title: '',
         content: '',
         category: '',
-        author: 'Prosperity'
+        author: `${user.username}`
     })
     
     const router = useRouter();

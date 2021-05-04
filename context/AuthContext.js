@@ -47,6 +47,7 @@ export const AuthProvider = ({children}) => {
         const data = await res.json()
 
         if(!data.message) {
+            console.log(data)
             setUser(data)
             router.push('/forums')
         } else {
@@ -72,8 +73,10 @@ export const AuthProvider = ({children}) => {
         const res = await fetch(`http://localhost:3000/api/auth/user`)
         const data = await res.json()
 
+        
+
         if(res.ok) {
-           setUser(data)
+           setUser(data.decoded)
         } else {
             setUser(null)
 

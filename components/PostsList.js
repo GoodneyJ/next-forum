@@ -5,7 +5,6 @@ import RecentTopics from '../components/RecentTopics'
 import PostListItem from './PostListItem'
 
 
-import forumStyles from '../styles/Forums.module.css'
 import sectionStyles from '../styles/PostSection.module.css'
 
 //https://www.youtube.com/watch?v=F1o_0umlXbU VIDEO ON SWR & DB MUTATIONS
@@ -30,7 +29,6 @@ export const PostsList = (props) => {
     //OUTPUT
     return (
         <div className={sectionStyles.sectionContainer}>
-
             <div className={sectionStyles.headingContainer}>
                 <h1 className={sectionStyles.headingText}>{props.title}</h1>
                 <div className={sectionStyles.headingButton} onClick={props.onClick}>
@@ -40,9 +38,7 @@ export const PostsList = (props) => {
 
             <div className={sectionStyles.middleContent}>
                 <div className={sectionStyles.topicsContainer}>
-                    
                     {postList.map((post) => (<PostListItem title={post.title} author={post.author} id={post._id}/>))}
-                    
                 </div>
                 
             </div>

@@ -71,6 +71,92 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.commentInterfaceContainer {
+
+
+    .addCommentBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #101010;
+        width: 80%;
+        height: 65px;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+        transition: 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #0a0a0a;
+            color: goldenrod;
+        }
+    }
+
+    .addCommentInterface {
+        display: flex;
+        justify-content: center;
+        background-color: #0a0a0a;
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+        transition: 0.2s;
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            padding: .75rem;
+            animation: fadeIn 0.25s linear;
+
+            textarea {
+                background-color: #1d1d1d;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                padding: 0.5rem;
+                width: 90%;
+                height: 100px;
+                color: #e0e0e0;
+                font-family: 'Montserrat';
+
+            }
+
+            input {
+                background-color: #1d1d1d;
+                color: #e0e0e0;
+                font-family: 'Montserrat';
+                font-size: 1rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
+                width: 90%;
+                padding: .5rem;
+                margin-top: 0.5rem;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: #101010;
+                    color: goldenrod;
+                }
+            }
+        }
+    }
+}
+
 .commentsContainer {
     background-color: #1d1d1d;
     padding: 1rem 0;
@@ -110,3 +196,4 @@
         }
     }
 }
+
