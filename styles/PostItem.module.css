@@ -163,16 +163,27 @@
           animation: fadeIn 0.25s linear;
 }
 
-.commentInterfaceContainer .addCommentInterface form textarea {
-  background-color: #1d1d1d;
+.commentInterfaceContainer .addCommentInterface form div {
   border: none;
   border-radius: 5px;
+  background-color: #101010;
   outline: none;
-  padding: 0.5rem;
-  width: 90%;
-  height: 100px;
-  color: #e0e0e0;
+}
+
+.commentInterfaceContainer .addCommentInterface form div button {
+  color: white;
+}
+
+.commentInterfaceContainer .addCommentInterface form div button span {
   font-family: 'Montserrat';
+}
+
+.commentInterfaceContainer .addCommentInterface form div button:hover {
+  color: #0a0a0a;
+}
+
+.commentInterfaceContainer .addCommentInterface form div ul li button:hover {
+  background-color: #e0e0e0;
 }
 
 .commentInterfaceContainer .addCommentInterface form input {

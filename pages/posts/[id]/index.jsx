@@ -2,6 +2,7 @@
 import { useState, useEffect, useContext} from 'react';
 import { Router, useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import Link from 'next/link'
 import NavBar from '../../../components/Navbar'
 import AuthContext from '../../../context/AuthContext'
@@ -49,7 +50,7 @@ const Post = ({ post }) => {
                     </div>
                 </div>
                 <div className={postItemStyles.contentText}>
-                    <p>{post.content}</p>
+                    <p>{ ReactHtmlParser(post.content) }</p>
                 </div>
             </div>
             <div className={postItemStyles.contentFooter}>

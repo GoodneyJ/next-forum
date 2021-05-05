@@ -81,20 +81,27 @@
   background-color: #0a0a0a;
 }
 
-.divBackground .createPostContainer form textarea {
-  margin: .5rem auto;
-  width: 80%;
-  height: 200px;
-  padding: 1rem;
-  background-color: #101010;
-  color: #e0e0e0;
+.divBackground .createPostContainer form div {
   border: none;
   border-radius: 5px;
-  font-family: 'Montserrat';
-  font-size: 1rem;
+  background-color: #101010;
   outline: none;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+}
+
+.divBackground .createPostContainer form div button {
+  color: white;
+}
+
+.divBackground .createPostContainer form div button span {
+  font-family: 'Montserrat';
+}
+
+.divBackground .createPostContainer form div button:hover {
+  color: #0a0a0a;
+}
+
+.divBackground .createPostContainer form div ul li button:hover {
+  background-color: #e0e0e0;
 }
 
 .divBackground .createPostContainer form .submitPostBtn {

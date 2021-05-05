@@ -1,5 +1,6 @@
+
+
 .divBackground {
-    
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('../public/backgroundTwo.jpeg');
@@ -7,7 +8,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-
     align-items: center;
     flex-direction: column;
 
@@ -59,19 +59,48 @@
                 }
             }
 
-            textarea {
-                margin: .5rem auto;
-                width: 80%;
-                height: 200px;
-                padding: 1rem;
-                background-color: #101010;
-                color: #e0e0e0;
+            // textarea {
+            //     margin: .5rem auto;
+            //     width: 80%;
+            //     height: 200px;
+            //     padding: 1rem;
+            //     background-color: #101010;
+            //     color: #e0e0e0;
+            //     border: none;
+            //     border-radius: 5px;
+            //     font-family: 'Montserrat';
+            //     font-size: 1rem;
+            //     outline: none;
+            //     transition: 0.2s;
+            // }
+
+            div {
                 border: none;
                 border-radius: 5px;
-                font-family: 'Montserrat';
-                font-size: 1rem;
+                background-color: #101010;
                 outline: none;
-                transition: 0.2s;
+
+                button {
+                    color: white;
+
+                    span {
+                        font-family: 'Montserrat';
+                    }
+
+                    &:hover {
+                        color:#0a0a0a;
+                    }
+                }
+
+                ul {
+                    li {
+                        button {
+                            &:hover {
+                                background-color: #e0e0e0;
+                            }
+                        }
+                    }
+                }
             }
 
             .submitPostBtn {

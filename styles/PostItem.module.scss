@@ -82,7 +82,6 @@
 
 .commentInterfaceContainer {
 
-
     .addCommentBtn {
         display: flex;
         justify-content: center;
@@ -122,17 +121,46 @@
             padding: .75rem;
             animation: fadeIn 0.25s linear;
 
-            textarea {
-                background-color: #1d1d1d;
+            // textarea {
+            //     background-color: #1d1d1d;
+            //     border: none;
+            //     border-radius: 5px;
+            //     outline: none;
+            //     padding: 0.5rem;
+            //     width: 90%;
+            //     height: 100px;
+            //     color: #0a0a0a;
+            //     font-family: 'Montserrat';
+
+            // }
+
+            div {
                 border: none;
                 border-radius: 5px;
+                background-color: #101010;
                 outline: none;
-                padding: 0.5rem;
-                width: 90%;
-                height: 100px;
-                color: #e0e0e0;
-                font-family: 'Montserrat';
 
+                button {
+                    color: white;
+
+                    span {
+                        font-family: 'Montserrat';
+                    }
+
+                    &:hover {
+                        color:#0a0a0a;
+                    }
+                }
+
+                ul {
+                    li {
+                        button {
+                            &:hover {
+                                background-color: #e0e0e0;
+                            }
+                        }
+                    }
+                }
             }
 
             input {

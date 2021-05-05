@@ -1,5 +1,7 @@
 import {useState} from 'react'
 import useSWR from 'swr'
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+
 import postItemStyles from '../styles/PostItem.module.css'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
@@ -24,7 +26,7 @@ const CommentList = (props) => {
                         <h4 className={postItemStyles.commentAuthor}>{comment.author}</h4>
                     </div>
                     <div className={postItemStyles.commentContent}>
-                        <p>{comment.content}</p>
+                        { ReactHtmlParser(comment.content) }
                     </div>
                     
                 </div>
