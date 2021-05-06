@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ABOUT
 
-## Getting Started
+This is a project I started in order to learn more about NextJS, CSS animations/psuedo classes and some back end development regarding DB manipulation & User authentication.
 
-First, run the development server:
+Technologies I've used for this are:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Sass, React-Icons, SunEditor-React, React-Toastify, Mongoose, MongoDB, BCrypt, JWTs, Cookies, and obviously React / Node
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Some things I wanted to accomplish with this project are:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Read/Write/Create/Edit Posts (done!)
+- Read/Write/Create Comments (done!)
+- Rich Text Formatting for Posts/Comments (maybe emotes soon?) (done!)
+- Register/Authenticate/Persist Users (done!)
+- Implement a chat/shout box (although im not sure how viable/possible it is with next)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# EXTRAS
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="https://media2.giphy.com/media/3DBwyKKl9dQWbO883X/giphy.gif?cid=790b761165bcff805bbd686fec2c01c5a1b73e5606534434&rid=giphy.gif&ct=g" width="500" />
+<img src="https://media3.giphy.com/media/jilXlVifT73ihMZR3U/giphy.gif?cid=790b76113fe2d0391728adde3dd31070e27ce9a444b3c55f&rid=giphy.gif&ct=g" width="500" />
+<img src="https://media1.giphy.com/media/hcVj61mbNba33tuyfI/giphy.gif?cid=790b7611032418342f33e1568e77cfcccd8093114bdf19ef&rid=giphy.gif&ct=g" width="500" />
+<img src="https://media3.giphy.com/media/V1ZqugGXOECjrHoeZ4/giphy.gif?cid=790b7611fbe68de135e64ac23f2555d428e10c5361a1988c&rid=giphy.gif&ct=g" width="500" />

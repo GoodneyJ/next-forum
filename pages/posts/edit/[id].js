@@ -1,16 +1,20 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 
-
+import AuthContext from '../../../context/AuthContext'
 import Nav from '../../../components/Navbar'
 import Footer from '../../../components/Footer'
+import SunEditor from 'suneditor-react';
 
+import 'suneditor/dist/css/suneditor.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import createPostStyles from '../../../styles/CreatePost.module.css'
 
 export default function EditPost({ post }) {
+
+    const {user} = useContext(AuthContext)
 
     const [values, setValues] = useState({
         title: post.title,
@@ -23,6 +27,11 @@ export default function EditPost({ post }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if(user) {
+            values.author = user.username
+            setValues({...values})
+        }
         
         //validation
         const hasEmptyFields = Object.values(values).some((element) => element === '');
@@ -70,7 +79,34 @@ export default function EditPost({ post }) {
                     <h2>Edit Post</h2>
                     <form onSubmit={handleSubmit}>
                         <input type="text" name="title" value={values.title} placeholder="Post Title" onChange={handleInputChange}/>
-                        <textarea type="text" name='content' value={values.content} placeholder="Your post here..." onChange={handleInputChange}/>
+                        {/* <textarea type="text" name='content' value={values.content} placeholder="Your post here..." onChange={handleInputChange}/> */}
+
+
+                        <SunEditor
+                            lang="en"
+                            name="content"
+                            width="80%"
+                            height="250px"
+                            defaultValue={post.content}
+                            setDefaultStyle="
+                            font-family: 'Montserrat';
+                            font-size: 1rem;
+                            background-color: #101010;
+                            color: #e0e0e0;
+                            border-radius: 5px;
+                            "
+                            onChange={(e) => {
+                                values.content = e
+
+                                setValues({...values})
+                            }}
+                            setOptions={{
+                                buttonList: [['formatBlock'],['fontSize'],['fontColor', 'bold', 'italic', 'underline', 'strike', 'hiliteColor' ],['codeView'],['undo', 'redo']]
+                            }}
+                            className={createPostStyles.sunEditor}
+                            />
+
+
                         <select name="category" value={values.category} onChange={handleInputChange}>
                             <option>Select a category</option>
                             <option>General Discussions</option>
