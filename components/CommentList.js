@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Link from 'next/link'
 import useSWR from 'swr'
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
@@ -9,10 +10,12 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 const CommentList = (props) => {
 
     const { data, error} = useSWR('http://localhost:3000/api/comments', fetcher)
+    console.log(data)
     const [commentArray, setCommentArray] = useState([])
     var filteredList;
     if(data) {
         filteredList = data.data.filter((comment) => comment.postTitle === props.postTitle)
+        console.log(filteredList)
     }
     
     return (
@@ -22,8 +25,10 @@ const CommentList = (props) => {
             filteredList.map((comment) => (
                 <div className={postItemStyles.commentItem}>
                     <div className={postItemStyles.commentAuthorInfo}>
-                        <span className={postItemStyles.profileImg}></span>
-                        <h4 className={postItemStyles.commentAuthor}>{comment.author}</h4>
+                        <img src={`${comment.authorImgUrl}`} className={postItemStyles.profileImg} />
+                        <Link href={`http://localhost:3000/users/${comment.authorId}`}>
+                            <h4 className={postItemStyles.commentAuthor}>{comment.author}</h4>
+                        </Link>
                     </div>
                     <div className={postItemStyles.commentContent}>
                         { ReactHtmlParser(comment.content) }

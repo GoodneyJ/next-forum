@@ -38,6 +38,12 @@
   border-bottom: 3px solid goldenrod;
 }
 
+.postContainer .contentContainer .contentHeading h4 {
+  text-align: center;
+  margin: .25rem 1rem;
+  cursor: pointer;
+}
+
 .postContainer .contentContainer .contentHeading p {
   text-align: center;
   margin: .25rem 1rem;
@@ -250,6 +256,7 @@
 
 .commentsContainer .commentItem .commentAuthorInfo .commentAuthor {
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .commentsContainer .commentItem .commentContent {

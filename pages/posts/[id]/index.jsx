@@ -45,7 +45,9 @@ const Post = ({ post }) => {
                 <div className={postItemStyles.contentHeading}>
                     <h1>{post.title}</h1>
                     <div>
-                        <p>{post.author}</p>
+                        <Link href={`http://localhost:3000/users/${post.authorId}`}>
+                            <h4>{post.author}</h4>
+                        </Link>
                         <p>{post.category}</p>
                     </div>
                 </div>

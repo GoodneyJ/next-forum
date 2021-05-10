@@ -38,13 +38,15 @@ export const Navbar = () => {
                 <li className={router.pathname == '/forums' ? navStyles.active : ''}>
                     <Link href="/forums">Forums</Link>
                 </li>
-                <li className={router.pathname == '/donate' ? navStyles.active : ''}>
-                    <Link href="/donate">Donate</Link>
-                </li>
                 {user ?
-                <li onClick={() => logout()}>
-                    Logout
-                </li>
+                <>
+                    <li className={router.pathname == '/donate' ? navStyles.active : ''}>
+                        <Link href={`http://localhost:3000/users/${user._id}`}>Profile</Link>
+                    </li>
+                    <li onClick={() => logout()}>
+                        Logout
+                    </li>
+                </>
                 :
                 <li className={router.pathname == '/account/login' ? navStyles.active : ''}>
                     <Link href="/account/login">Login / Signup</Link>

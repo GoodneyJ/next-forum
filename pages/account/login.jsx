@@ -12,11 +12,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
 
+  //Input values
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  //Extracts Login function & Error value from AuthContext
   const {login, error} = useContext(AuthContext)
 
+  //If error is set from Context, it displays error through this
   useEffect(() => error && toast.error(error))
 
   const handleSubmit = (e) => {
@@ -31,7 +34,6 @@ export default function Login() {
         <Nav />
         <div className={loginStyles.loginFormContainer}>
           <h2>Login</h2>
-
           <form onSubmit={handleSubmit}>
             <input type="text" name="email" placeHolder="Email@email.com" onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" name="password" placeHolder="Password" onChange={(e) => setPassword(e.target.value)}/>
@@ -42,10 +44,8 @@ export default function Login() {
               </div>
               <p className={loginStyles.forgotPassword}>Forgot your password?</p>
             </div>
-            
             <input type="submit" value="Login" className={loginStyles.loginBtn} />
           </form>
-          
         </div>
         <Link href='/account/register'><p className={loginStyles.register}>Not registered? Click here!</p></Link>
     </div>

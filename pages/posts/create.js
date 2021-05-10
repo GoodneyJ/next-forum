@@ -15,18 +15,16 @@ import createPostStyles from '../../styles/CreatePost.module.css'
 
 
 export default function CreatePost() {
-
+    //Extracts User Object from AuthContext
     const {user} = useContext(AuthContext)
-    const [textContent, setTextContent] = useState()
-
-
     
-
+    //Values Object for Form Submission
     const [values, setValues] = useState({
         title: '',
         content: '',
         category: '',
-        author: ``
+        author: ``,
+        authorId: ``
     })
     
     const router = useRouter();
@@ -36,16 +34,16 @@ export default function CreatePost() {
 
         if(user) {
             values.author = user.username
+            values.authorId = user._id
             setValues({...values})
         }
 
-        //validation
+        //Checks if the Values Object is missing information needed for form submission
         const hasEmptyFields = Object.values(values).some((element) => element === '');
-
         if(hasEmptyFields) {
             toast.error('Please Fill in all fields');
         } else {
-
+            //Form Submission Block
             const res = await fetch(`http://localhost:3000/api/posts`, {
                 method: 'POST',
                 headers: {
@@ -68,20 +66,17 @@ export default function CreatePost() {
         setValues({...values, [name]:value})
     }
 
-
     return (
         <>
-
             <div className={createPostStyles.divBackground}>
                 <Nav />
-                
                 <div className={createPostStyles.createPostContainer}>
                     <h2>Create Post</h2>
+
+                    {/* Post Form */}
                     <form className='ck-content' onSubmit={handleSubmit}>
                         <input type="text" name="title" value={values.title} placeholder="Post Title" onChange={handleInputChange}/>
                         {/* <textarea type="text" name='content' value={values.content} placeholder="Your post here..." onChange={handleInputChange}/> */}
-
-
                         <SunEditor
                             lang="en"
                             name="content"
@@ -104,8 +99,6 @@ export default function CreatePost() {
                             }}
                             className={createPostStyles.sunEditor}
                             />
-
-
                         <select name="category" value={values.category} onChange={handleInputChange}>
                             <option>Select a category</option>
                             <option>General Discussions</option>
@@ -113,7 +106,6 @@ export default function CreatePost() {
                             <option>Media</option>
                             <option>Offtopic</option>
                         </select>
-                        
                         <input type="submit" value="Submit Post" className={createPostStyles.submitPostBtn}/>
                     </form>
                 </div>

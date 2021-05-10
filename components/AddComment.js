@@ -10,31 +10,41 @@ import postSectionStyles from '../styles/PostItem.module.scss'
 
 const AddComment = (props) => {
 
+    //Extracts User Object from AuthContext
     const {user, logout} = useContext(AuthContext)
+    //Gets current mm/dd/yyyy Date
     var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-    const [textContent, setTextContent] = useState()
 
+    //Values Object for form submission
     const [values, setValues] = useState({
         author: `${user ? user.username : ''}`,
         date: `${utc}`,
         postTitle: props.postTitle,
-        content: ''
+        content: '',
+        authorImgUrl: `${user ? user.profileImg : ''}`,
+        authorId: `${user ? user._id : ''}`
     })
 
+    //Boolean value that decides if interface is open or closed
     const [bool, setBool] = useState(false)
 
     const router = useRouter();
+    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         
         if(user) {
             values.author = user.username
+            values.authorImgUrl = user.profileImg
+            values.authorId = user._id
             setValues({...values})
         }
 
-        //validation
+        //Checks values object for empty forms
         const hasEmptyFields = Object.values(values).some((element) => element === '');
+
         if(user) {
             setValues({...values})
             if(hasEmptyFields) {
@@ -56,6 +66,7 @@ const AddComment = (props) => {
                 }
             }
         }
+        //Closes Add Comment Interface
         setBool(!bool);
     }
 
@@ -68,6 +79,7 @@ const AddComment = (props) => {
         <div className={postSectionStyles.commentInterfaceContainer}>
             {
                 bool ?
+                //Opened Comment Interface
                 <div className={postSectionStyles.addCommentInterface}>
                     <form onSubmit={handleSubmit}>
                         <SunEditor
@@ -95,6 +107,7 @@ const AddComment = (props) => {
                     </form>
                 </div>
                 :
+                //Closed comment interface
                 <div className={postSectionStyles.addCommentBtn} onClick={() => setBool(!bool)}>
                     <h3>Add Comment</h3>
                 </div>

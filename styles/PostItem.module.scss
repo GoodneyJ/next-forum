@@ -30,6 +30,12 @@
                 border-bottom: 3px solid goldenrod;
             }
 
+            h4 {
+                text-align: center;
+                margin: .25rem 1rem;
+                cursor: pointer;
+            }
+
             p {
                 text-align: center;
                 margin: .25rem 1rem;
@@ -216,6 +222,7 @@
     
             .commentAuthor {
                 margin-bottom: 0;
+                cursor: pointer;
             }
         }
     

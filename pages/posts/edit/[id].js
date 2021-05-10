@@ -14,8 +14,10 @@ import createPostStyles from '../../../styles/CreatePost.module.css'
 
 export default function EditPost({ post }) {
 
+    //Extracts User Object from AuthContext
     const {user} = useContext(AuthContext)
 
+    //Values Object for Form Submission
     const [values, setValues] = useState({
         title: post.title,
         content: post.content,
@@ -33,13 +35,13 @@ export default function EditPost({ post }) {
             setValues({...values})
         }
         
-        //validation
+        //Checks if the Values Object is missing information needed for form submission
         const hasEmptyFields = Object.values(values).some((element) => element === '');
 
         if(hasEmptyFields) {
             toast.error('Please Fill in all fields');
         } else {
-
+            //Form Submission Block
             const res = await fetch(`http://localhost:3000/api/posts/${post._id}`, {
                 method: 'PUT',
                 headers: {
@@ -54,34 +56,24 @@ export default function EditPost({ post }) {
                 const data = await res.json();
                 router.push(`/forums`)
             }
-
         }
-
-
-
-
     }
 
     const handleInputChange = (e) => {
-
         const {name, value} = e.target
         setValues({...values, [name]:value})
-
     }
 
     return (
         <>
-
             <div className={createPostStyles.divBackground}>
                 <Nav />
-                
                 <div className={createPostStyles.createPostContainer}>
                     <h2>Edit Post</h2>
+                    {/* POST FORM */}
                     <form onSubmit={handleSubmit}>
                         <input type="text" name="title" value={values.title} placeholder="Post Title" onChange={handleInputChange}/>
                         {/* <textarea type="text" name='content' value={values.content} placeholder="Your post here..." onChange={handleInputChange}/> */}
-
-
                         <SunEditor
                             lang="en"
                             name="content"
@@ -97,7 +89,6 @@ export default function EditPost({ post }) {
                             "
                             onChange={(e) => {
                                 values.content = e
-
                                 setValues({...values})
                             }}
                             setOptions={{
@@ -105,8 +96,6 @@ export default function EditPost({ post }) {
                             }}
                             className={createPostStyles.sunEditor}
                             />
-
-
                         <select name="category" value={values.category} onChange={handleInputChange}>
                             <option>Select a category</option>
                             <option>General Discussions</option>
@@ -114,7 +103,6 @@ export default function EditPost({ post }) {
                             <option>Media</option>
                             <option>Offtopic</option>
                         </select>
-                        
                         <input type="submit" value="Update Post" className={createPostStyles.submitPostBtn}/>
                     </form>
                 </div>
@@ -139,7 +127,6 @@ export default function EditPost({ post }) {
 export async function getServerSideProps({ query: {id}, req}) {
     const res = await fetch(`http://localhost:3000/api/posts/${id}`);
     const { data } = await res.json();
-
 
     return {
         props: {

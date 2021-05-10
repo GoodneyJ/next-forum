@@ -10,7 +10,9 @@ export default function Donate() {
         <div className={donateStyles.divBackground}>
             <Meta title="PVGS | Donate"/>
             <Nav />
-            <h1>Welcome to the donate page</h1>
+            <div className={donateStyles.contentContainer}>
+              
+            </div>
         </div>
         <Footer />
       </>

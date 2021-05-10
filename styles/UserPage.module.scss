@@ -1,0 +1,110 @@
+.pageContainer {
+
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('../public/backgroundTwo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    .userInfoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #0a0a0a;
+        min-width: 50%;
+        margin: 5rem auto;
+        padding: 5rem 2rem;
+        border-radius: 5px;
+        box-shadow:0px 2px 5px 0px rgba(0, 0, 0, 0.863) , 0px 1px 10px 0px rgba(0, 0, 0, 0.534) , 0px 2px 4px -1px rgba(0, 0, 0, 0.603) ;
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .userProfileImg {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+            }
+
+
+    
+            .statContainer {
+                text-align: left;
+                width: 100%;
+                margin: 0 auto;
+
+    
+                .statItem {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .bioText {
+                    background-color: #101010;
+                    min-height: 350px;
+                    min-width: 100%;
+                    padding: 1rem;
+                    border-radius: 2px;
+                }
+    
+                .editBioText {
+                    background-color: #101010;
+                    min-height: 350px;
+                    min-width: 100%;
+                    padding: 1rem;
+                    border-radius: 2px;
+                    margin-bottom: 1rem;
+                    border: none;
+                    color: #e0e0e0;
+                    font-family: 'Montserrat';
+                }
+    
+                .userInputDiv {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .imgUrlInput {
+                        background-color: #101010;
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        color: #e0e0e0;
+                        border-radius: 2px;
+                        font-family: 'Montserrat';
+                        border: none;
+
+                    }
+
+                    .bioBtn {
+                        background-color: #101010;
+                        border-radius: 2px;
+                        border: none;
+                        padding: 1rem 1.5rem;
+                        color: #e0e0e0;
+                        box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+                        transition: .2s;
+                        font-weight: 600;
+                        font-family: 'Montserrat';
+                        letter-spacing: .5px;
+        
+                        &:hover {
+                            box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0, 0, 0, 0.568) , 0px 2px 4px -1px rgba(0, 0, 0, 0.555) ;
+                            cursor: pointer;
+                            color: goldenrod
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

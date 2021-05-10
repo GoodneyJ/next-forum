@@ -18,6 +18,14 @@ const CommentSchema = new mongoose.Schema({
 
     content: {
         type: String
+    },
+
+    authorImgUrl: {
+        type: String
+    },
+
+    authorId: {
+        type: String
     }
 
 })
