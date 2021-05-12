@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "ChatBox.module.scss"
+    ],
+    "names": [],
+    "file": "ChatBox.module.css"
+}

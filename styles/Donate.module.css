@@ -17,4 +17,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.divBackground .contentContainer {
+  width: 80%;
+}
 /*# sourceMappingURL=Donate.module.css.map */

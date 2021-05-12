@@ -1,19 +1,19 @@
 import { useState } from 'react'
 
-
 import Meta from '../components/Meta'
 import Nav from '../components/Navbar'
 import UserMessage from '../components/UserMessage'
 import PostContainer from '../components/PostContainer'
 import PostsList from '../components/PostsList'
+import ChatBox from '../components/ChatBox'
 import Footer from '../components/Footer'
+
 
 import forumStyles from '../styles/Forums.module.css'
 
+
+
 export default function Forums({ posts }) {
-
-
-  
   const [activeForumSection, setActiveForumSection] = useState('');
   const [bool, setBool] = useState(false);
 
@@ -35,27 +35,7 @@ export default function Forums({ posts }) {
 
           <div className={forumStyles.chatBackground}>
           <Nav />
-
-            <div className={forumStyles.chatContainer}>
-                <div className={forumStyles.chatOutput}>
-                  <ul className={forumStyles.messageList}>
-                    <UserMessage username="OiBruv" message="Hello world!"/>
-                    <UserMessage username="Gronk" message="yooooooooooooo"/>
-                    <UserMessage username="Prosperity" message="WidePeepoHappy"/>
-                  </ul>
-                </div>
-                <div className={forumStyles.chatInterface}>
-                  <textarea />
-                  <div className={forumStyles.chatButtons}>
-                    <div className={forumStyles.row}>
-                      <p className={forumStyles.rowButtons}></p>
-                      <p className={forumStyles.rowButtons}></p>
-                      <p className={forumStyles.rowButtons}></p>
-                    </div>
-                    <div className={forumStyles.sendBtn}>send</div>
-                  </div>
-                </div>
-            </div>
+          {ChatBox ? <ChatBox /> : ''}
           </div>
 
           {

@@ -42,6 +42,12 @@
   list-style: none;
   padding: .001rem 0;
   margin: 1rem 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 500px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .chatBackground .chatContainer .chatOutput .messageList .userMessage {
@@ -76,6 +82,7 @@
   margin: 0;
   font-weight: 600;
   text-transform: uppercase;
+  color: goldenrod;
 }
 
 .chatBackground .chatContainer .chatOutput .messageList .userMessage .messageContent p {
@@ -85,13 +92,13 @@
   letter-spacing: .5px;
 }
 
-.chatBackground .chatContainer .chatInterface {
+.chatBackground .chatContainer .chatInterface form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.chatBackground .chatContainer .chatInterface textarea {
+.chatBackground .chatContainer .chatInterface form textarea {
   width: 85%;
   margin: .5rem .5rem;
   margin-right: 0;
@@ -103,17 +110,17 @@
   outline: none;
 }
 
-.chatBackground .chatContainer .chatInterface textarea:focus {
+.chatBackground .chatContainer .chatInterface form textarea:focus {
   border: 1px solid black;
 }
 
-.chatBackground .chatContainer .chatInterface .chatButtons .row {
+.chatBackground .chatContainer .chatInterface form .chatButtons .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.chatBackground .chatContainer .chatInterface .chatButtons .row .rowButtons {
+.chatBackground .chatContainer .chatInterface form .chatButtons .row .rowButtons {
   margin: .5rem 1rem;
   background-color: #101010;
   height: 15px;
@@ -121,7 +128,7 @@
   border-radius: 50%;
 }
 
-.chatBackground .chatContainer .chatInterface .chatButtons .sendBtn {
+.chatBackground .chatContainer .chatInterface form .chatButtons .sendBtn {
   text-align: center;
   letter-spacing: 1px;
   padding: .25rem;
@@ -129,7 +136,8 @@
   background-color: #e0e0e0;
   border-radius: 2px;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 1rem;
+  color: #101010;
 }
 
 .postsContainer {
@@ -166,5 +174,46 @@
   cursor: pointer;
   color: goldenrod;
   background-color: #0a0a0a;
+}
+
+.userMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1rem;
+  margin: 1.25rem auto;
+  width: 95%;
+  height: 3.75rem;
+  border-radius: 5px;
+  background-color: #1d1d1d;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.userMessage span {
+  background-color: #101010;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.userMessage .messageContent {
+  margin-left: 1rem;
+}
+
+.userMessage .messageContent h4 {
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.userMessage .messageContent p {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: .5px;
 }
 /*# sourceMappingURL=Forums.module.css.map */

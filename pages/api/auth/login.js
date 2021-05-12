@@ -11,7 +11,6 @@ export default async (req, res) => {
         dbConnect()
 
         const {email, password} = req.body
-
         var user = await findUserEmail(email)
         user = user[0]
         
