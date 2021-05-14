@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 
+// Checks JWT for user Info
 export default async (req, res) => {
     dbConnect()
 

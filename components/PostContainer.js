@@ -13,7 +13,7 @@ export const PostContainer = (props) => {
 
     return (
         <div className={forumStyles.postsContainer}>
-          {user ? 
+          {user && user.confirmed ? 
             <div className={forumStyles.createPostLink}>
               <Link href="/posts/create"><p>Create Post</p></Link>
             </div>

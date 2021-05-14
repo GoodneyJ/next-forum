@@ -1,4 +1,6 @@
 import cookie from 'cookie'
+
+//Destroys User Cookie
 export default async (req, res) => {
     if(req.method === 'POST') {
         res.setHeader('Set-Cookie', cookie.serialize('token', '', {

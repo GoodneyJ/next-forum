@@ -26,6 +26,11 @@ const UserSchema = new mongoose.Schema({
 
     bio: {
         type: String
+    },
+
+    confirmed: {
+        type: Boolean,
+        default: false
     }
 
 

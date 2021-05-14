@@ -77,7 +77,7 @@ export default function ChatBox() {
                     <p className={forumStyles.rowButtons}></p>
                     <p className={forumStyles.rowButtons}></p>
                     </div>
-                    {user ? <button type="submit" className={forumStyles.sendBtn}>Send</button> : ''}
+                    {user && user.confirmed ? <button type="submit" className={forumStyles.sendBtn}>Send</button> : ''}
                 </div>
             </form>
             </div>

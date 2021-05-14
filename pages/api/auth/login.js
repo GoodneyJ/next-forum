@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const cookie = require('cookie')
 
+//Authenticates User
 export default async (req, res) => {
     if(req.method === 'POST') {
         dbConnect()
@@ -14,7 +15,7 @@ export default async (req, res) => {
         var user = await findUserEmail(email)
         user = user[0]
         
-        if(user) {
+        if(user && user.confirmed) {
             
             if(await bcrypt.compare(password, user.password)) {
                 const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_TOKEN_SECRET)
@@ -32,7 +33,7 @@ export default async (req, res) => {
             }
 
         } else {
-            res.status(200).json({message:'user not found'})
+            res.status(200).json({message:'user not found, or account needs to be verified'})
         }
     } else {
         res.setHeader('Allow', ['POST'])

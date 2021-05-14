@@ -21,8 +21,12 @@ export const AuthProvider = ({children}) => {
             },
             body: JSON.stringify(user)
         })
-        console.log(user)
-        console.log(res)
+
+        // Need to send email from here,
+        //JWT Sign ->
+        //Send JWT to api/mailer/index
+        
+
         if(!res.ok) {
             toast.error('Something Went Wrong')
         } else {
