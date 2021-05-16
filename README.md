@@ -13,6 +13,7 @@ Some things I wanted to accomplish with this project are:
 - Rich Text Formatting for Posts/Comments (maybe emotes soon?) (done!)
 - Register/Authenticate/Persist Users (done!)
 - Implement a chat/shout box (although im not sure how viable/possible it is with next)
+- Implement Account Email Verification (done!)
 
 # EXTRAS
 
@@ -20,3 +21,5 @@ Some things I wanted to accomplish with this project are:
 <img src="https://media3.giphy.com/media/jilXlVifT73ihMZR3U/giphy.gif?cid=790b76113fe2d0391728adde3dd31070e27ce9a444b3c55f&rid=giphy.gif&ct=g" width="500" />
 <img src="https://media1.giphy.com/media/hcVj61mbNba33tuyfI/giphy.gif?cid=790b7611032418342f33e1568e77cfcccd8093114bdf19ef&rid=giphy.gif&ct=g" width="500" />
 <img src="https://media3.giphy.com/media/V1ZqugGXOECjrHoeZ4/giphy.gif?cid=790b7611fbe68de135e64ac23f2555d428e10c5361a1988c&rid=giphy.gif&ct=g" width="500" />
+<img src="https://media2.giphy.com/media/WVXPJubsYT3Ydji1AN/giphy.gif?cid=790b76114ce4a969127cad40946cdc13f352b8981d7e2872&rid=giphy.gif&ct=g" width="500" />
+<img src="https://media1.giphy.com/media/RVGAQtsWd5PNaQpVCx/giphy.gif?cid=790b7611b48e7438c2679893ca4853e9a0e5beefdef4930e&rid=giphy.gif&ct=g" width="500" />
