@@ -2,7 +2,7 @@ import findUserEmail from '../../../helpers/index'
 import User from '../../../models/User'
 import dbConnect from '../../../utils/dbConnect'
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 const cookie = require('cookie')
 

@@ -10,6 +10,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-theme-lark": "^27.1.0",
     "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cookie": "^0.4.1",
     "dotenv": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
