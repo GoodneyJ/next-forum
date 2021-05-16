@@ -52,7 +52,6 @@ export const AuthProvider = ({children}) => {
         const data = await res.json()
 
         if(!data.message) {
-            console.log(data)
             setUser(data)
             router.push('/forums')
         } else {

@@ -2,9 +2,10 @@
 
 export const Meta = (props) => {
     return (
-        <div>
+        <head>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <title>{props.title}</title>
-        </div>
+        </head>
     )
 }
 

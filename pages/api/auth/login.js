@@ -18,6 +18,7 @@ export default async (req, res) => {
         if(user && user.confirmed) {
             
             if(await bcrypt.compare(password, user.password)) {
+                user.password = '';
                 const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_TOKEN_SECRET)
                 res.setHeader('Set-Cookie', cookie.serialize('token', accessToken, {
                     httpOnly: true,
@@ -26,6 +27,7 @@ export default async (req, res) => {
                     sameSite: 'strict',
                     path: '/'
                 }))
+
 
                 res.status(200).json(user)
             } else {

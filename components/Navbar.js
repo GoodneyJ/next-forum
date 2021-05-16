@@ -49,7 +49,7 @@ export const Navbar = () => {
                 </>
                 :
                 <li className={router.pathname == '/account/login' ? navStyles.active : ''}>
-                    <Link href="/account/login">Login / Signup</Link>
+                    <Link href="/account/login">Login</Link>
                 </li>
                 }
             </ul>

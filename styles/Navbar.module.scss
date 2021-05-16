@@ -7,8 +7,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
-
+    vertical-align: center;
     .active {
         font-weight: 700;
         color: goldenrod;
@@ -20,7 +19,6 @@
             background-color: goldenrod;
             margin-top: 3px;
             height: 2px;
-            width: 2px;
             left: 0;
             width: 100%;
             transition: 0.2s;
@@ -56,7 +54,6 @@
                 display: block;
                 background-color: goldenrod;
                 height: 2px;
-                width: 2px;
                 margin-top: 3px;
                 left: 0;
                 width: 0%;
@@ -81,4 +78,116 @@
 
 
 
-/* GENERAL */
+/* MEDIA QUERIES */
+@media only screen and (max-width: 360px) {
+    .navbarContainer {
+        font-family: 'Montserrat';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            font-weight: 700;
+            padding: 0.25rem;
+            font-size: .75rem;
+            color:goldenrod;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .active {
+            font-weight: 700;
+            background-color: rgb(27, 27, 27);
+            height: 80%;
+            &::after {
+                content: '';
+                display: block;
+                background-color: goldenrod;
+                margin-top: 3px;
+                height: 2px;
+                left: 0;
+                width: 100%;
+                transition: 0.2s;
+            }
+        }
+
+        ul {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 .15rem;
+                font-size: .65rem;
+                vertical-align: center;
+                padding: 0;
+                
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+    .navbarContainer {
+        padding: 1rem .5rem;
+        font-family: 'Montserrat';
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: center;
+
+        .logo {
+            font-weight: 700;
+            padding: 0.25rem;
+            font-size: .75rem;
+            color:goldenrod;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .active {
+            font-weight: 700;
+            background-color: rgb(27, 27, 27);
+            height: 80%;
+            &::after {
+                content: '';
+                display: block;
+                background-color: goldenrod;
+                margin-top: 3px;
+                height: 2px;
+                left: 0;
+                width: 100%;
+                transition: 0.2s;
+            }
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 .05rem;
+                font-size: .65rem;
+                vertical-align: center;
+                padding: .45rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+    .navbarContainer {
+        .logo {
+
+        }
+
+        ul {
+            li {
+                margin: 0 0.5rem;
+            }
+        }
+    }
+}

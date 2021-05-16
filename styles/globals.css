@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: 'Montserrat';
   color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 a {

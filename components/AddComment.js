@@ -34,7 +34,6 @@ const AddComment = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(values)
         if(user) {
             values.author = user.username
             values.authorImgUrl = user.profileImg
@@ -106,11 +105,13 @@ const AddComment = (props) => {
                         <input type="submit" name="submit" value="Submit"/>
                     </form>
                 </div>
-                :
+                : user ?
                 //Closed comment interface
                 <div className={postSectionStyles.addCommentBtn} onClick={() => setBool(!bool)}>
                     <h3>Add Comment</h3>
                 </div>
+                :
+                <div className={postSectionStyles.addCommentBtn}>Log in to add a comment</div>
             }
             <ToastContainer />
         </div>

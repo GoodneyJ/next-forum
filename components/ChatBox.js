@@ -5,6 +5,7 @@ import AuthContext from '../context/AuthContext'
 import Pusher from 'pusher-js'
 
 import forumStyles from '../styles/Forums.module.css'
+import { set } from 'mongoose';
 export default function ChatBox() {
 
     const {user} = useContext(AuthContext)
@@ -34,7 +35,7 @@ export default function ChatBox() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setMessageToSend('')
         if(user) {
             const res = await fetch(`/api/pusher`, {
                 method: 'POST',

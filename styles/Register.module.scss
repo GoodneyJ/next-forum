@@ -116,3 +116,19 @@
     }
 
 }
+
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+ 
+    .registerBackground {
+        .registerFormContainer {
+            width: 85%;
+
+            .registerBtn {
+                width: 50%;
+            }
+        }
+
+
+    }
+
+}

@@ -8,13 +8,13 @@
     border-top: 2px solid #464646;
     border-bottom: 2px solid #464646;
     ul {
-        margin: 0;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         list-style: none;
-
+        padding: 0;
         li {
-            margin: 1rem;
+            margin: .5rem;
             font-size: 1.75rem;
             transition: .2s;
             border-radius: 50%;
@@ -61,5 +61,18 @@
         text-align: center;
         padding: .5rem 0;
         color: #464646;
+    }
+}
+
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+    .footerContainer {
+        .footerLinks {
+
+            p {
+                margin: 1rem .45rem;
+                font-size: .65rem;
+                color: goldenrod;
+            }
+        }
     }
 }

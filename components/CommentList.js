@@ -10,12 +10,10 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 const CommentList = (props) => {
 
     const { data, error} = useSWR('/api/comments', fetcher)
-    console.log(data)
     const [commentArray, setCommentArray] = useState([])
     var filteredList;
     if(data) {
         filteredList = data.data.filter((comment) => comment.postTitle === props.postTitle)
-        console.log(filteredList)
     }
     
     return (

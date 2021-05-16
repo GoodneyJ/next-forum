@@ -1,0 +1,88 @@
+@-webkit-keyframes shine {
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes shine {
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+.pageContainer {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../public/backgroundTwo.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../public/backgroundTwo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pageContainer .centerContent {
+  margin-top: 30%;
+  background-color: #101010;
+  height: 240px;
+  width: 400px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.863), 0px 1px 10px 0px rgba(0, 0, 0, 0.534), 0px 2px 4px -1px rgba(0, 0, 0, 0.603);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.863), 0px 1px 10px 0px rgba(0, 0, 0, 0.534), 0px 2px 4px -1px rgba(0, 0, 0, 0.603);
+}
+
+.pageContainer .centerContent h2, .pageContainer .centerContent p, .pageContainer .centerContent span {
+  margin: 1rem;
+}
+
+.pageContainer .centerContent h2 {
+  text-transform: uppercase;
+}
+
+.pageContainer .centerContent h2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 50%;
+  background-color: goldenrod;
+}
+
+.pageContainer .centerContent p {
+  margin: 3rem 1rem;
+}
+
+.pageContainer .centerContent span {
+  padding: 1rem;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.pageContainer .centerContent span:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.568), 0px 2px 4px -1px rgba(0, 0, 0, 0.555);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.568), 0px 2px 4px -1px rgba(0, 0, 0, 0.555);
+  color: goldenrod;
+  background: goldenrod;
+  background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.75) 5%, rgba(255, 255, 255, 0.75) 10%, transparent 10%, transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-animation: shine 3s infinite;
+          animation: shine 3s infinite;
+  transition: .2s;
+}
+/*# sourceMappingURL=Verify.module.css.map */

@@ -13,7 +13,7 @@ export const CallToAction = (props) => {
             <div className={callToActionStyles.contentWrapper}>
                 <h1 className={callToActionStyles.headingText}>Welcome to a carefully crafted Community & SMP Experience</h1>
                 <p className={callToActionStyles.subHeadingText}>Join us in game by applying on the forums!</p>
-                <span className={callToActionStyles.btn}><Link  href='/login'><span>Apply Here!</span></Link></span>
+                <span className={callToActionStyles.btn}><Link  href='/account/login'><span>Apply Here!</span></Link></span>
             </div>
            <video id="video" autoPlay loop muted>
                <source src="/otherfootage.mp4" type="video/mp4" />
@@ -31,7 +31,9 @@ export const CallToAction = (props) => {
                     z-index: -1;
                 }
 
-
+                @media only screen and (max-width: 360px) {
+                    width: 360px !important;
+                }
 
             `}
             </style>

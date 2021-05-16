@@ -181,4 +181,19 @@
   background-color: #101010;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+  .divBackground .loginFormContainer {
+    width: 85%;
+  }
+  .divBackground .loginFormContainer .utilityLinksContainer {
+    font-size: .60rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .divBackground .loginFormContainer .loginBtn {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=Login.module.css.map */

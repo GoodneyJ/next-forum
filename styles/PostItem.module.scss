@@ -232,3 +232,52 @@
     }
 }
 
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+    .postContainer {
+        height: 100vh;
+
+        .contentContainer {
+            width: 90%;
+
+            .contentHeading {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #101010;
+                padding: 1rem 1.25rem;
+    
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+    
+                h1 {
+                    font-size: 1.25rem;
+                    border-bottom: 3px solid goldenrod;
+                }
+    
+                h4 {
+                    font-size: 1rem;
+                    text-align: right;
+                    margin: .25rem 1rem;
+                    cursor: pointer;
+                }
+    
+                p {
+                    font-size: .75rem;
+                    text-align: right;
+                    margin: .25rem 1rem;
+                }
+            }
+    
+            .contentText {
+                p {
+                    padding: .75rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .contentFooter {
+            width: 90%;
+        }
+    }
+}

@@ -27,3 +27,27 @@
         }
     }
 }
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+    .sectionDividerContainer {
+
+        .innerContent {
+            h1 {
+                font-size: 2rem;
+                margin: 1rem;
+                text-align: center;
+                &::after {
+                    content: '';
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 5px;
+                    background-color: goldenrod;
+                    display: block;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+}

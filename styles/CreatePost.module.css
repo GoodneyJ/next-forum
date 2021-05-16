@@ -113,4 +113,51 @@
   background-color: #0a0a0a;
   color: goldenrod;
 }
+
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+  .divBackground {
+    height: 100%;
+  }
+  .divBackground .createPostContainer {
+    margin: 1rem auto;
+    width: 90%;
+  }
+  .divBackground .createPostContainer form input, .divBackground .createPostContainer form select {
+    margin: .25rem auto;
+    width: 80%;
+    padding: 1rem;
+    background-color: #101010;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .divBackground .createPostContainer form input:focus, .divBackground .createPostContainer form select:focus {
+    background-color: #0a0a0a;
+  }
+  .divBackground .createPostContainer form .sun-editor {
+    width: 90%;
+  }
+  .divBackground .createPostContainer form div {
+    border: none;
+    border-radius: 5px;
+    background-color: #101010;
+    outline: none;
+  }
+  .divBackground .createPostContainer form div button {
+    color: white;
+  }
+  .divBackground .createPostContainer form div button span {
+    font-family: 'Montserrat';
+  }
+  .divBackground .createPostContainer form div button:hover {
+    color: #0a0a0a;
+  }
+  .divBackground .createPostContainer form div ul li button:hover {
+    background-color: #e0e0e0;
+  }
+}
 /*# sourceMappingURL=CreatePost.module.css.map */

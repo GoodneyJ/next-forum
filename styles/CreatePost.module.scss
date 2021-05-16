@@ -115,3 +115,73 @@
     }
 
 }
+
+
+@media only screen and (min-width: 360px ) and (max-width: 414px) {
+    .divBackground {
+        height: 100%;
+
+        .createPostContainer {
+            margin: 1rem auto;
+            width: 90%;
+
+            form {
+                
+                input, select {
+                    margin: .25rem auto;
+                    width: 80%;
+                    padding: 1rem;
+                    background-color: #101010;
+                    color: #e0e0e0;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    outline: none;
+                    transition: 0.2s;
+    
+                    &:focus {
+                        background-color: #0a0a0a;
+                    }
+                }
+    
+                .sun-editor {
+                    width: 90%;
+                }
+
+                div {
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #101010;
+                    outline: none;
+    
+                    button {
+                        color: white;
+    
+                        span {
+                            font-family: 'Montserrat';
+                        }
+    
+                        &:hover {
+                            color:#0a0a0a;
+                        }
+                    }
+    
+                    ul {
+                        li {
+                            button {
+                                &:hover {
+                                    background-color: #e0e0e0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+
+
+    }
+
+}

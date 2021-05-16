@@ -18,8 +18,6 @@ export default function Forums({ posts }) {
   const [bool, setBool] = useState(false);
 
   const handleClick = (e) => {
-    console.log(e.target.textContent)
-    
     setBool(!bool);
 
     if(!bool) {

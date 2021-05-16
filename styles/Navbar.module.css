@@ -12,6 +12,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  vertical-align: center;
 }
 
 .navbarContainer .active {
@@ -26,7 +27,6 @@
   background-color: goldenrod;
   margin-top: 3px;
   height: 2px;
-  width: 2px;
   left: 0;
   width: 100%;
   -webkit-transition: 0.2s;
@@ -67,7 +67,6 @@
   display: block;
   background-color: goldenrod;
   height: 2px;
-  width: 2px;
   margin-top: 3px;
   left: 0;
   width: 0%;
@@ -85,5 +84,122 @@
   width: 100%;
 }
 
-/* GENERAL */
+/* MEDIA QUERIES */
+@media only screen and (max-width: 360px) {
+  .navbarContainer {
+    font-family: 'Montserrat';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbarContainer .logo {
+    font-weight: 700;
+    padding: 0.25rem;
+    font-size: .75rem;
+    color: goldenrod;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .navbarContainer .active {
+    font-weight: 700;
+    background-color: #1b1b1b;
+    height: 80%;
+  }
+  .navbarContainer .active::after {
+    content: '';
+    display: block;
+    background-color: goldenrod;
+    margin-top: 3px;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .navbarContainer ul {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbarContainer ul li {
+    margin: 0 .15rem;
+    font-size: .65rem;
+    vertical-align: center;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+  .navbarContainer {
+    padding: 1rem .5rem;
+    font-family: 'Montserrat';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    vertical-align: center;
+  }
+  .navbarContainer .logo {
+    font-weight: 700;
+    padding: 0.25rem;
+    font-size: .75rem;
+    color: goldenrod;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .navbarContainer .active {
+    font-weight: 700;
+    background-color: #1b1b1b;
+    height: 80%;
+  }
+  .navbarContainer .active::after {
+    content: '';
+    display: block;
+    background-color: goldenrod;
+    margin-top: 3px;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .navbarContainer ul {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbarContainer ul li {
+    margin: 0 .05rem;
+    font-size: .65rem;
+    vertical-align: center;
+    padding: .45rem;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .navbarContainer ul li {
+    margin: 0 0.5rem;
+  }
+}
 /*# sourceMappingURL=Navbar.module.css.map */

@@ -31,4 +31,22 @@
   display: block;
   margin-top: .5rem;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+  .sectionDividerContainer .innerContent h1 {
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  .sectionDividerContainer .innerContent h1::after {
+    content: '';
+    width: 80%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: goldenrod;
+    display: block;
+    margin-top: .5rem;
+  }
+}
 /*# sourceMappingURL=SectionDivider.module.css.map */

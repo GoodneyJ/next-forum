@@ -262,4 +262,50 @@
 .commentsContainer .commentItem .commentContent {
   margin-left: 3rem;
 }
+
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+  .postContainer {
+    height: 100vh;
+  }
+  .postContainer .contentContainer {
+    width: 90%;
+  }
+  .postContainer .contentContainer .contentHeading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #101010;
+    padding: 1rem 1.25rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .postContainer .contentContainer .contentHeading h1 {
+    font-size: 1.25rem;
+    border-bottom: 3px solid goldenrod;
+  }
+  .postContainer .contentContainer .contentHeading h4 {
+    font-size: 1rem;
+    text-align: right;
+    margin: .25rem 1rem;
+    cursor: pointer;
+  }
+  .postContainer .contentContainer .contentHeading p {
+    font-size: .75rem;
+    text-align: right;
+    margin: .25rem 1rem;
+  }
+  .postContainer .contentContainer .contentText p {
+    padding: .75rem;
+    font-size: 1rem;
+  }
+  .postContainer .contentFooter {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=PostItem.module.css.map */

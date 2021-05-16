@@ -23,8 +23,8 @@ export default async (req, res) => {
                 console.log(error)
             }
         }
-
         if(decoded) {
+
             res.status(200).json({decoded})
             return;
         } else {
