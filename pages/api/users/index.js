@@ -22,7 +22,9 @@ export default async (req, res) => {
 
             // Transporter for nodemailer
             const transporter = nodemailer.createTransport({
-                service: 'Gmail',
+                host: "jarrodg.dev",
+                port: 465,
+                secure: true,
                 auth: {
                     user: process.env.NEXT_PUBLIC_EMAIL,
                     pass: process.env.NEXT_PUBLIC_PASS
