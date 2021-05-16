@@ -14,7 +14,8 @@ export const AuthProvider = ({children}) => {
 
     //Register user
     const register = async (user) => {
-        const res = await fetch(`http://localhost:3000/api/users`, {
+        // process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/users` : `${process.env.NEXT_PUBLIC_URL}/api/users`
+        const res = await fetch(`/api/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,7 +38,7 @@ export const AuthProvider = ({children}) => {
 
     //Login user
     const login = async ({email, password}) => {
-        const res = await fetch(`http://localhost:3000/api/auth/login`, {
+        const res = await fetch(`/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +63,7 @@ export const AuthProvider = ({children}) => {
 
     //Logout user
     const logout = async () => {
-        const res = await fetch(`http://localhost:3000/api/auth/logout`, {
+        const res = await fetch(`/api/auth/logout`, {
             method: 'POST'
         })
 
@@ -74,7 +75,7 @@ export const AuthProvider = ({children}) => {
 
     //Check if user is logged in
     const checkUserLoggedIn = async (user) => {
-        const res = await fetch(`http://localhost:3000/api/auth/user`)
+        const res = await fetch(`/api/auth/user`)
         const data = await res.json()
 
         

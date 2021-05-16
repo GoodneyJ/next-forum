@@ -34,7 +34,7 @@ const AddComment = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        console.log(values)
         if(user) {
             values.author = user.username
             values.authorImgUrl = user.profileImg

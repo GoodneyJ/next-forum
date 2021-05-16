@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
     let decoded = jwt.verify(token, process.env.EMAIL_SECRET)
 
     //Form Submission Block - Changes propery of specific user
-    const resp = await fetch(`http://localhost:3000/api/users/${decoded.user}`, {
+    const resp = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/users/${decoded.user}` : `${process.env.NEXT_PUBLIC_URL}/api/users/${decoded.user}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

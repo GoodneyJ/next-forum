@@ -13,7 +13,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import createPostStyles from '../../../styles/CreatePost.module.css'
 
 export default function EditPost({ post }) {
-
     //Extracts User Object from AuthContext
     const {user} = useContext(AuthContext)
 
@@ -42,7 +41,9 @@ export default function EditPost({ post }) {
             toast.error('Please Fill in all fields');
         } else {
             //Form Submission Block
-            const res = await fetch(`http://localhost:3000/api/posts/${post._id}`, {
+            // process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/posts/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`
+            // `http://localhost:3000/api/posts/${post._id}`
+            const res = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/posts/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -125,7 +126,8 @@ export default function EditPost({ post }) {
 // }
 
 export async function getServerSideProps({ query: {id}, req}) {
-    const res = await fetch(`http://localhost:3000/api/posts/${id}`);
+    // `http://localhost:3000/api/posts/${id}`
+    const res = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/posts/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`);
     const { data } = await res.json();
 
     return {

@@ -18,9 +18,6 @@ const Post = ({ post }) => {
 
     const {user} = useContext(AuthContext)
     
-    
-    
-
     const delPost = async (e) => {
         if(confirm('Are you sure?')) {
             const res = await fetch(`http://localhost:3000/api/posts/${post._id}`, {
@@ -45,7 +42,8 @@ const Post = ({ post }) => {
                 <div className={postItemStyles.contentHeading}>
                     <h1>{post.title}</h1>
                     <div>
-                        <Link href={`http://localhost:3000/users/${post.authorId}`}>
+                    
+                        <Link href={`/users/${post.authorId}`}>
                             <h4>{post.author}</h4>
                         </Link>
                         <p>{post.category}</p>
@@ -79,11 +77,10 @@ const Post = ({ post }) => {
 }
 
 Post.getInitialProps = async ({ query: { id } }) => {
-    const postRes = await fetch(`http://localhost:3000/api/posts/${id}`);
+    // process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/users/${post.authorId}` : `${process.env.NEXT_PUBLIC_URL}/users/${post.authorId}`
+    // `http://localhost:3000/api/posts/${id}`
+    const postRes = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/posts/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`);
     const { data } = await postRes.json();
-
-
-
 
     return {
         post: data,

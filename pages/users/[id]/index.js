@@ -18,11 +18,11 @@ const User = ({ userInfo }) => {
     let filteredComments;
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/posts')
+        fetch('/api/posts')
         .then((res) => res.json())
         .then(setPosts)
 
-        fetch('http://localhost:3000/api/comments')
+        fetch('/api/comments')
         .then((res) => res.json())
         .then(setComments)
     }, [])
@@ -57,7 +57,7 @@ const User = ({ userInfo }) => {
             toast.error('Please Fill in all fields');
         } else {
             //Form Submission Block
-            const res = await fetch(`http://localhost:3000/api/users/${userInfo._id}`, {
+            const res = await fetch(`/api/users/${userInfo._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -113,7 +113,7 @@ const User = ({ userInfo }) => {
 }
 
 User.getInitialProps = async ({ query: { id } }) => {
-    const userRes = await fetch(`http://localhost:3000/api/users/${id}`);
+    const userRes = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/users/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/users/${id}`);
     const { data } = await userRes.json();
 
     return {

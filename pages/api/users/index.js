@@ -12,9 +12,8 @@ export default async (req, res) => {
     switch ( method ) {
         case 'GET':
             try {
-                const users = await User.find({});
-
-                res.status(200).json({ success: true, data: users})
+                // const users = await User.find({});
+                res.status(405).json({message: 'Method Not Allowed'})
             } catch (error) {
                 res.status(400).json({success: false})
             }
@@ -38,7 +37,7 @@ export default async (req, res) => {
 
                 //Stores Email into token & sends to user
                 const token = jwt.sign({user: user._id}, process.env.EMAIL_SECRET, {expiresIn: '1d'})
-                const url = `http://localhost:3000/account/verify/${token}`;
+                const url = process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/account/verify/${token}` : `${process.env.NEXT_PUBLIC.URL}/ccount/verify/${token}`;
 
                 // Sends the mail
                 transporter.sendMail({
