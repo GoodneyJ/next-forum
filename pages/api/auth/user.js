@@ -1,7 +1,7 @@
 import dbConnect from '../../../utils/dbConnect'
 import cookie from 'cookie'
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 
 // Checks JWT for user Info
