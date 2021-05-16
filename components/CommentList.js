@@ -26,7 +26,7 @@ const CommentList = (props) => {
                 <div className={postItemStyles.commentItem}>
                     <div className={postItemStyles.commentAuthorInfo}>
                         <img src={`${comment.authorImgUrl}`} className={postItemStyles.profileImg} />
-                        <Link href={`http://localhost:3000/users/${comment.authorId}`}>
+                        <Link href={`/users/${comment.authorId}`}>
                             <h4 className={postItemStyles.commentAuthor}>{comment.author}</h4>
                         </Link>
                     </div>
@@ -61,7 +61,7 @@ const CommentList = (props) => {
 
 
 CommentList.getInitialProps = async ({ query: { id } }) => {
-    const postRes = await fetch(`http://localhost:3000/api/posts/${id}`);
+    const postRes = await fetch(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/api/posts/${id}` : `${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`);
     const { data } = await postRes.json();
 
     return {

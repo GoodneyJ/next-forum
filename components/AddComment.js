@@ -50,7 +50,7 @@ const AddComment = (props) => {
             if(hasEmptyFields) {
                 toast.error('Please Fill in all fields');
             } else {
-                const res = await fetch(`http://localhost:3000/api/comments`, {
+                const res = await fetch(`/api/comments`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

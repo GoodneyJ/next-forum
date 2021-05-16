@@ -15,7 +15,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export const PostsList = (props) => {
     //SWR HOOK & DATA FETCH
-    const { data, error} = useSWR('http://localhost:3000/api/posts', fetcher)
+    const { data, error} = useSWR('/api/posts', fetcher)
     
     //ERROR CATCH
     if(error) return <div>Failed to load</div>

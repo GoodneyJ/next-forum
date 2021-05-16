@@ -41,7 +41,7 @@ export const Navbar = () => {
                 {user ?
                 <>
                     <li className={router.pathname == '/donate' ? navStyles.active : ''}>
-                        <Link href={`http://localhost:3000/users/${user._id}`}>Profile</Link>
+                        <Link href={`/users/${user._id}`}>Profile</Link>
                     </li>
                     <li onClick={() => logout()}>
                         Logout

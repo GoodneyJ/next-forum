@@ -36,7 +36,7 @@ export default function ChatBox() {
         e.preventDefault();
 
         if(user) {
-            const res = await fetch(`http://localhost:3000/api/pusher`, {
+            const res = await fetch(`/api/pusher`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
