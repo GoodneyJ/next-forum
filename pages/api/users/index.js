@@ -37,7 +37,9 @@ export default async (req, res) => {
 
                 //Stores Email into token & sends to user
                 const token = jwt.sign({user: user._id}, process.env.EMAIL_SECRET, {expiresIn: '1d'})
-                const url = process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/account/verify/${token}` : `${process.env.NEXT_PUBLIC.URL}/account/verify/${token}`;
+                //ENABLE IF DEV
+                //process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/account/verify/${token}` : `${process.env.NEXT_PUBLIC.URL}/account/verify/${token}`;
+                const url = process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev' ? `http://localhost:3000/account/verify/${token}` : `${process.env.NEXT_PUBLIC_URL}/account/verify/${token}`;
 
                 // Sends the mail
                 transporter.sendMail({
