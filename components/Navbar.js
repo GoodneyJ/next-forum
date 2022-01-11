@@ -20,6 +20,7 @@ export const Navbar = () => {
             let navbar = document.getElementById("navbar")
 
             if(window.pageYOffset >= 100) {
+                console.log('activate')
                 navbar.classList.add("sticky");
             } else {
                 navbar.classList.remove("sticky");

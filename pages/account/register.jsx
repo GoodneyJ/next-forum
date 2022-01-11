@@ -59,7 +59,7 @@ export default function Signup() {
                 <div className={registerStyles.registerFormContainer}>
                     <h2>Register</h2>
                     <form onSubmit={handleSubmit}>
-                    <input type="text" name="email" placeHolder="Email@email.com" onChange={handleInputChange}/>
+                        <input type="text" name="email" placeHolder="Email@email.com" onChange={handleInputChange}/>
                         <input type="text" name="username" placeHolder="Your Username" onChange={handleInputChange}/>
                         <input type="password" name="password" placeHolder="Password" onChange={handleInputChange}/>
                         <input type="password" name="confPassword" placeholder="Re-Enter Password" onChange={(e) => setConfPassword(e.target.value)}/>

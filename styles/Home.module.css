@@ -38,7 +38,7 @@
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-width: 360px) and (max-width: 414px) {
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .aboutContainer {
     background-color: #0c0c0c;
     padding: 5rem 0;
